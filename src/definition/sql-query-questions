@@ -2,14 +2,41 @@ This file contains SQL questions.
 Please read the questions and answer.
 
 What is Database?
-A.
+A. Database is systemic collection of organized information
+where data stored electronically
 
 What is DBMS?
+its a software system to retrieve, manipulate,
+store structure data in the database by organize way.
+
+
 What is the difference between SQL and MySQL?
+SQL is used in the accessing, updating, and manipulation
+of data in a database while MySQL is an RDBMS that allows
+keeping the data that exists in a database organized.
+
+
 What is RDBMS? How is it different from DBMS?
+RDBMS IS relational database management system to make
+information relation in database & DBMS not making relationship,
+
+
 What are Tables and Fields?
+A database table is composed of records and fields that hold data.
+Tables are also called datasheets. Each table in a database holds data about a different, but related, subject.
+A field is part of a record and contains a single piece of data for the subject of the record
+
+
+
 What is SQL?
+Structured query language, lets access and manipulate databases
+
+
 What are Constraints in SQL?
+SQL constraints are used to specify rules for the data in a table. Constraints are used to limit the type of
+data that can go into a table. This ensures the accuracy and reliability of the data in the table.
+
+
 What is a Primary Key?
 What is a Foreign Key?
 What is Normalization?
