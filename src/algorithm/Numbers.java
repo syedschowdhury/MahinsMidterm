@@ -31,15 +31,17 @@ public class Numbers {
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
         connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
-        List<String> numbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
-        printValue(numbers);
+        List<String> selectionSortNumbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
+        printValue(selectionSortNumbers);
 		int n = num.length;
 		randomize (num, n);
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
-
+		connectToSqlDB.insertDataFromArrayToSqlTable(num, "insertion_sort", "SortingNumbers");
+		List<String> insertionSortNumbers = connectToSqlDB.readDataBase("insertion_sort", "SortingNumbers");
+		printValue(insertionSortNumbers);
 		//By following above, Continue for rest of the Sorting Algorithm....
 
 

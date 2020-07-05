@@ -14,7 +14,7 @@ public class CsvReader {
          You need to find the average score of the class.
          */
 
-        String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster-file-09-07-2019.csv";
+        String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster-file-07-04-2020.csv";
         String line = "";
         String cvsSplitBy = ",";
         BufferedReader br = null;
@@ -55,10 +55,10 @@ public class CsvReader {
                 System.out.print("You haven't done enough-->                 ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }else if (student.getNumberOfExercisesSolved()>=100&&student.getNumberOfExercisesSolved()<200) {
-                System.out.print("You did not take this course seriously enough-->   ");
+                System.out.print("You did not take this Codelab seriously enough-->   ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }else if (student.getNumberOfExercisesSolved()<100) {
-                System.out.print("You did not like java coding!-->                           ");
+                System.out.print("You did not like Codelab !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
         }
