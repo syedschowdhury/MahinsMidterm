@@ -23,8 +23,7 @@ public class Factorial {
 
 
         }
-        System.out.println("Factorial of "+fact);
-
+        System.out.println("Factorial of "+num+" is "+fact);
 
     }
 }
