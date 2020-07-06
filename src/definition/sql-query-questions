@@ -38,9 +38,21 @@ data that can go into a table. This ensures the accuracy and reliability of the 
 
 
 What is a Primary Key?
+The PRIMARY KEY constraint uniquely identifies each record in a table.
+it must contain UNIQUE values, and cannot contain null values.
+
+
 What is a Foreign Key?
+foreign key is single or group of columns that refers primary key from another table.
+
 What is Normalization?
+in sql NOrmalization is breaking large
+table into small small tables and links them using relationship.
+
+
 What is Denormalization?
+Denormalization is a database optimization technique where we add redundant data in the
+database to get rid of the complex join operations.
 
 You have 2 tables given below.
 
@@ -61,13 +73,36 @@ CustomerID	   CustomerName	    CustomerPhone	     Country
 Please do the following on above Order table and Customer table:
 
 Inner Join:
+SELECT Order.OrderID, Customer.CustomerName
+FROM Order
+INNER JOIN Customer ON Order.CustomerID = Customer.CustomerID;
+
 Left Join:
+SELECT Customer.CustomerName, Order.OrderID
+FROM Customer
+LEFT JOIN Order
+ON Customer.CustomerID=Order.CustomerID
+ORDER BY Customer.CustomerName;
+
 Right Join:
+SELECT Order.OrderID, Customer.Country, Customer.CustomerName
+FROM Order
+RIGHT JOIN Customer
+ON Order.CustomerID = Customer.CustomerID
+ORDER BY Order.OrderID;
+
 Full Join:
+SELECT Customer.CustomerName, Order.OrderID
+FROM Customer
+FULL OUTER JOIN Order ON Customer.CustomerID=Order.CustomerID;
 
 On Customer Table, please Insert one row.
+INSERT INTO Customer
+VALUES (4, 'Mahin Chowdhury', 917-698-2237, 'Bangladesh');
 
 On Order Table, please Update one row.
-
+UPDATE Order
+SET OrderID= 20509
+WHERE CustomerID=1;
 
 
